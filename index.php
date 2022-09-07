@@ -14,13 +14,13 @@
             <option value="common">เรื่องทั่วไป</option>
             <option value="study">เรื่องเรียน</option>
         </select><a href="login.html" style="float:right;">เข้าสู่ระบบ</a>
-        <br>
-        <form action="post.php" method="get"></form>
-    <ul><li><a href = "post.php?id=1">กระทู้ที่ 1</li>
-        <li><a href = "post.php?id=2">กระทู้ที่ 2</li>
-        <li><a href = "post.php?id=3">กระทู้ที่ 3</li>
-        <li><a href = "post.php?id=4">กระทู้ที่ 4</li>
-        <li><a href = "post.php?id=5">กระทู้ที่ 5</li></a></ul>
-        </form>
+        <br><br>
+        <?php
+        $i = 1;
+        while($i <= 10){
+            echo "<li><a href='post.php?id=$i'>กระทู้ที่ $i <br></a></li>";
+            $i++;
+        }
+        ?>
 </body>
 </html>

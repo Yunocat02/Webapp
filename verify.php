@@ -9,9 +9,17 @@
 <body>
     <h1 style="text-align: center;">Chawanwit Webboard</center></h1><hr>
     <center>
-    เข้าสู่ระบบด้วย<br>
-    Login = <?php echo $_POST["user"];?><br>
-    Password = <?php echo $_POST["pass"];?>
+    <?php
+        if($_POST['user'] == "admin" && $_POST['pass'] == "ad1234")
+                echo "ยินดีต้องร้บคุณ ADMIN";
+        elseif($_POST['user'] == "member" && $_POST['pass'] == "mem1234")
+                echo "ยินดีต้องร้บคุณ MEMBER";
+        else
+            echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง<br><br>";
+
+        echo "ถ้ายังไม่ได้สมัครสมาชิก <a href='index.php'>กรุณาสมัครสมาชิก<br></a>";
+        
+    ?>
     </center>
 </body>
 </html>
