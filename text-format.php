@@ -24,11 +24,11 @@
         vertical-align: middle;
         display: table-cell;
         }
-        p.indent{
-            background-color:#cde;
-            text-indent:50px;
-            width: 300px;
-            }
+    p.indent{
+        background-color:#cde;
+        text-indent:50px;
+        width: 300px;
+    }
         </style>
 </head>
 <body>

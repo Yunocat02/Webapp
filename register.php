@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,13 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        if(isset($_SESSION['role']))
+        {
+            header('Location: index.php');
+            die;
+        }
+    ?>
     <h1><center>สมัครสมาชิก</center></h1><hr>
     <table style="border:2px solid black; width:40%" align ="center">
     <form>
